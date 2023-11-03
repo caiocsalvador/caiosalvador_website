@@ -3,25 +3,40 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+    --navy-background-color: #05010d;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+html {
+    background-color: var(--navy-background-color);
+    min-height: 100vh;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+    font-family: "League Spartan", sans-serif;
+    color: white;
+    background: radial-gradient(
+        100% 237.74% at 0% 0%,
+        rgba(6, 48, 97, 0.8) 0%,
+        rgba(5, 1, 13, 0.8) 32.34%,
+        rgba(20, 2, 23, 0.8) 90.66%
+    );
+    min-height: 100vh;
+    /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
