@@ -8,36 +8,57 @@ const DigitalMarketingSkills = [
   "Lead Nurturing",
   "HubSpot",
   "Google Ads",
-  "Facebook Ads",
-  "Email Marketing",
+  "Social Media Ads",
   "Mailchimp",
   "Sendgrid",
   "A/B Testing",
-  "Landing Pages",
   "User Journey",
   "Google Tag Manager",
 ];
 
 const FullStackSkills = [
-  "Javascript (ES6+)",
   "Typescript",
+  "Javascript",
   "React",
   "Next.js",
+  "Prisma",
   "Node.js",
+  "Tailwind",
+  "Angular",
+  "Vue.js",
+  "Chakra UI",
   "Express",
-  "MongoDB",
+  "JQuery",
   "MySQL",
+  "PostgreSQL",
+  "MongoDB",
+  "Storybook",
+  "Svelte",
+  "SvelteKit",
   "GraphQL",
-  "Apollo",
-  "Tailwind CSS",
   "Bootstrap",
-  "Material UI",
-  "Jest",
-  "React Testing Library",
-  "Cypress",
+  "PHP",
+  "WordPress",
+  "Sage",
+  "Laravel",
+  "Yii Framework",
+  "Python",
+  "Django",
+  "Ruby",
+  "Ruby on Rails",
+  "Mobile Apps Dev",
+  "React Native",
+  "Sass",
+  "CSS-in-JS",
   "Git",
-  "Github",
-  "Gitlab",
+  "APIs Development",
+  "Stripe",
+  "Zoom API",
+  "Hubspot API",
+  "Unreal Engine 5",
+  // "Jest",
+  // "React Testing Library",
+  // "Cypress",
 ];
 
 const DataAnalysisSkills = [
@@ -56,14 +77,13 @@ const DataAnalysisSkills = [
   "Data Cleaning",
   "Data Analysis",
   "Statistics",
-  "Business Intelligence",
 ];
 
 const Skills = () => {
   return (
-    <section>
+    <section className="py-32">
       <div className="container mx-auto">
-        <h2 className="text-6xl">Skills &amp; Tools</h2>
+        <h2 className="mb-10 text-center text-6xl font-semibold">Skills &amp; Tools</h2>
         <div className="grid grid-cols-4 gap-4">
           <SkillsBox type="small" color="green" title="Digital Marketing" skills={DigitalMarketingSkills} />
           <SkillsBox

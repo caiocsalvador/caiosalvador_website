@@ -20,29 +20,34 @@ const SkillsBox: React.FC<SkillsBoxProps> = ({ type, color, title, skills, class
   switch (type) {
     case "large":
       return (
-        <div className={`flex justify-between ${className}`}>
-          <div className="from-gradient_blue to-gradient_purple mt-16 h-[370px] w-[2px] bg-gradient-to-b"></div>
-          <div className={`bg-transparent_white rounded-2xl px-4 py-5 ${className}`}>
-            <h3 className={`mb-5 text-center text-4xl ${colorVariants[color].heading}`}>{title}</h3>
-            <ul className="list-inside list-disc columns-3">
-              {skills.map((skill) => (
-                <li className={`text-lg ${colorVariants[color].list}`} key={skill}>
-                  {skill}
-                </li>
-              ))}
-            </ul>
+        <div className={`flex flex-col ${className}`}>
+          <div className={`flex justify-between`}>
+            <div className="mr-4 mt-16 h-[370px] w-[2px] flex-shrink-0  bg-gradient-to-b from-gradient_blue to-gradient_purple"></div>
+            <div className={`h-[fit-content] rounded-2xl bg-transparent_white px-5 py-5  ${className}`}>
+              <h3 className={`mb-5 text-center text-4xl tracking-wide ${colorVariants[color].heading}`}>{title}</h3>
+              <ul className="flex list-inside list-disc flex-wrap">
+                {skills.map((skill) => (
+                  <li className={`mb-3 w-[33%] text-lg tracking-wide ${colorVariants[color].list}`} key={skill}>
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="ml-4 mt-16 h-[370px] w-[2px] flex-shrink-0  bg-gradient-to-b from-gradient_blue to-gradient_purple"></div>
           </div>
-          <div className="from-gradient_blue to-gradient_purple mt-16 h-[370px] w-[2px] bg-gradient-to-b"></div>
+          <h4 className="mt-6 text-center font-light">Always leaning...</h4>
         </div>
       );
     // If the type is not large, it will default to small
     default:
       return (
-        <div className={`bg-transparent_white mt-16 rounded-2xl px-4 py-5 ${className}`}>
-          <h3 className={`mb-5 text-4xl ${colorVariants[color].heading}`}>{title}</h3>
+        <div className={`mt-16 rounded-2xl bg-transparent_white px-5 py-5 ${className}`}>
+          <h3 className={`mb-5 text-4xl tracking-wide ${colorVariants[color].heading}`}>{title}</h3>
           <ul className={`list-inside list-disc text-lg ${colorVariants[color].list}`}>
             {skills.map((skill) => (
-              <li key={skill}>{skill}</li>
+              <li key={skill} className="mb-3 tracking-wide">
+                {skill}
+              </li>
             ))}
           </ul>
         </div>
