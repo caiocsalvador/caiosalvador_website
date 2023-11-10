@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     colors: {
       blue: "#007CE2",
-      blueTint: "#005CA8",
+      blueTint: "#0083FC",
       lightBlue: "#63B2D9",
       darkBlue: "#2104D3",
       navy: "#05010D",
@@ -24,6 +24,7 @@ const config: Config = {
       transparent_white: "rgba(255, 255, 255, 0.1)",
       gradient_blue: "#54A7E4",
       gradient_purple: "#8067C7",
+      gray: "#CACACA",
     },
     screens: {
       sm: "640px",

@@ -1,8 +1,11 @@
 import React from "react";
+import Color from "@/types/color";
+
+type SkillsBoxType = "large" | "small";
 
 type SkillsBoxProps = {
-  type: "large" | "small";
-  color: "green" | "blue" | "purple";
+  type: SkillsBoxType;
+  color: Color;
   title: string;
   skills: string[];
   className?: string;
@@ -14,6 +17,9 @@ const SkillsBox: React.FC<SkillsBoxProps> = ({ type, color, title, skills, class
     blue: { heading: "text-blue", list: "text-lightBlue" },
     green: { heading: "text-green", list: "text-lightGreen" },
     purple: { heading: "text-purple", list: "text-lightPurple" },
+    pink: { heading: "text-pink", list: "text-lightPink" },
+    orange: { heading: "text-orange", list: "text-lightOrange" },
+    darkBlue: { heading: "text-lightBlue", list: "text-blue" },
   };
 
   // Switch statement to handle the different types of skills boxes
