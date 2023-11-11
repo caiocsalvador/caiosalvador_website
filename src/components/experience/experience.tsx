@@ -31,7 +31,7 @@ const experienceItems = [
     startDate: "2014",
     endDate: "2015",
     description:
-      "This company was incubated in the state's wind energy center, they had multiple legacy projects that had to be maintenad while developing new features. I was a Full-stack developer there, using Python, Django, Ruby, Ruby on Rails. I also developed a mobile app using Phonegap.",
+      "This company was incubated in the state's wind energy center, they had multiple legacy projects that had to be maintained while developing new features. I was a Full-stack developer there, using Python, Django, Ruby, Ruby on Rails. I also developed a mobile app using Phonegap.",
     color: "orange",
   },
   {
