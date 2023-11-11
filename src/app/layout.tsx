@@ -1,9 +1,11 @@
+// Next.js imports and global styles
 import type { Metadata } from "next";
-import { inter, league_spartan } from "@/utils/fonts";
-
 import "./globals.css";
-
+// Fonts
+import { inter, league_spartan } from "@/utils/fonts";
+// Custom components
 import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
 
 export const metadata: Metadata = {
   title: "Caio Salvador - Full-stack Developer",
@@ -16,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.variable} ${league_spartan.variable} antialiased`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
