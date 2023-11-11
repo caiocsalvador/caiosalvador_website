@@ -21,11 +21,11 @@ const ExperienceItem = ({ title, startDate, endDate, description, color, classNa
 
   return (
     <div className={`rounded-r-2xl border-l-4 bg-transparent_white p-5 ${colorVariants[color]} ${className}`}>
-      <h3 className="text-2xl font-semibold">{title}</h3>
-      <p className="text-gray-600">
+      <h3 className="font-league_spartan text-2xl font-semibold">{title}</h3>
+      <p className="text-xs uppercase text-purple">
         {startDate} - {endDate}
       </p>
-      <p className="text-gray mt-2 leading-6	">{description}</p>
+      <p className="text mt-2 leading-6 text-gray">{description}</p>
     </div>
   );
 };

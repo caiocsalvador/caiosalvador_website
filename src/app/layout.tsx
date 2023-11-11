@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { League_Spartan } from "next/font/google";
+import { inter, league_spartan } from "@/utils/fonts";
+
 import "./globals.css";
 
 import Header from "@/components/header/header";
-
-const inter = League_Spartan({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Caio Salvador - Full-stack Developer",
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.variable} ${league_spartan.variable} antialiased`}>
         <Header />
         {children}
       </body>

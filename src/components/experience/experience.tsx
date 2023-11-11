@@ -7,7 +7,7 @@ const experienceItems = [
     startDate: "2018",
     endDate: "PRESENT",
     description:
-      "Being a developer working in the Marketing department helped me develop new skills which I've being using and improving in this role. Today my tasks are divided between Full-stack web development, data analysis, and marketing. I started maintaining a legacy Wordpress/Sage website, however in order to give a better user experience and overall performance upgrade, I've managed a development team and built the current www.poppulo.com website using React, Next.js and Sanity CMS increasing the website conversion rate considerably. On the data analysis side I created report dashboards using data from multiple platforms to enhance the marketing team's decision making process. I also manage a good portion of the marketing team's tech stack, which includes Google Analytics, Google Tag Manager, Google Optimize, Google Looker Studio, Google Search Console, Hotjar, Hubspot Forms, Sanity CMS and more. Marketing is what we do, so I'm involved in many marketing projects and campaigns, helping the team to archive their goals. Campaign creation, landing pages, SEO, Salesforce integration, KPIs tracking.",
+      "Being a developer working in the Marketing department helped me develop new skills which I've being using and improving in this role. Today my tasks are divided between Full-stack web development, data analysis, and marketing. I started maintaining a legacy Wordpress/Sage website, however in order to give a better user experience and overall performance upgrade, I've managed a development team and built the current www.poppulo.com website using React, Next.js and Sanity CMS increasing the website conversion rate considerably. On the data analysis side I created report dashboards using data from multiple platforms to enhance the marketing team's decision making process. I also manage a good portion of the marketing team's tech stack, which includes Google Analytics, Google Tag Manager, Google Optimize, Google Looker Studio, Google Search Console, Hotjar, Hubspot Forms, Sanity CMS and more. Marketing is what we do, so I'm involved in many marketing projects and campaigns, helping the team to archive their goals. Campaign setup, landing pages, SEO, Salesforce integration, KPIs tracking and more",
     color: "blue",
   },
   {
@@ -23,7 +23,7 @@ const experienceItems = [
     startDate: "2014",
     endDate: "2015",
     description:
-      "Top 3 digital marketing agencies in Natal-Brazil. I worked on a wide range of projects for our customers. Websites and Mobile Apps using a custom CakePHP based CMS, Wordpress, Angular, Ionic, JQuery, HTML, CSS, Sass, Bootstrap, MySQL and other UI Libraries.",
+      "Top 3 digital marketing agencies in Natal-Brazil. I worked on a wide range of projects for our customers. Working there I created Websites and Mobile Apps using a custom CakePHP based CMS, Wordpress, Angular, Ionic, JQuery, HTML, CSS, Sass, Bootstrap, MySQL and other UI Libraries.",
     color: "pink",
   },
   {
@@ -47,7 +47,7 @@ const experienceItems = [
 const Experience = () => {
   return (
     <div className="container mx-auto">
-      <h2 className="mb-10 text-center text-6xl font-semibold">Experience</h2>
+      <h2 className="font-league_spartan mb-10 text-center text-6xl font-semibold">Experience</h2>
       <div className="grid grid-flow-row grid-cols-2 grid-rows-3 gap-4">
         {experienceItems.map((item, index) => (
           <ExperienceItem
