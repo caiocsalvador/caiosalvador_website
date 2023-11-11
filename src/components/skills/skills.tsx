@@ -82,22 +82,20 @@ const DataAnalysisSkills = [
 
 const Skills = () => {
   return (
-    <section className="py-32">
-      <div className="container mx-auto">
-        <h2 className="mb-10 text-center text-6xl font-semibold">Skills &amp; Tools</h2>
-        <div className="grid grid-cols-4 gap-4">
-          <SkillsBox type="small" color={"green" as Color} title="Digital Marketing" skills={DigitalMarketingSkills} />
-          <SkillsBox
-            type="large"
-            color={"blue" as Color}
-            title="Full-Stack Development"
-            skills={FullStackSkills}
-            className="col-span-2"
-          />
-          <SkillsBox type="small" color={"purple" as Color} title="Data Analysis" skills={DataAnalysisSkills} />
-        </div>
+    <div className="container mx-auto">
+      <h2 className="mb-10 text-center text-6xl font-semibold">Skills &amp; Tools</h2>
+      <div className="grid grid-cols-4 gap-4">
+        <SkillsBox type="small" color={"green" as Color} title="Digital Marketing" skills={DigitalMarketingSkills} />
+        <SkillsBox
+          type="large"
+          color={"blue" as Color}
+          title="Full-Stack Development"
+          skills={FullStackSkills}
+          className="col-span-2"
+        />
+        <SkillsBox type="small" color={"purple" as Color} title="Data Analysis" skills={DataAnalysisSkills} />
       </div>
-    </section>
+    </div>
   );
 };
 

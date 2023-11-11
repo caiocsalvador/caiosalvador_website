@@ -24,7 +24,12 @@ const config: Config = {
       transparent_white: "rgba(255, 255, 255, 0.1)",
       gradient_blue: "#54A7E4",
       gradient_purple: "#8067C7",
+      about_gcolor1: "#8A5DF3CC",
+      about_gcolor2: "#8A5DF333",
+      transparent_black: "rgba(0, 0, 0, 0.20);",
       gray: "#CACACA",
+      white: "#FFFFFF",
+      black: "#000000",
     },
     screens: {
       sm: "640px",
