@@ -43,7 +43,7 @@ const ContactForm = () => {
       />
       <button
         type="submit"
-        className="upp ml-auto inline-block rounded-lg bg-blue px-6 py-2 text-lg text-white transition-all hover:bg-blueTint"
+        className="ml-auto inline-block rounded-lg bg-blue px-6 py-2 text-lg text-white transition-all hover:bg-blueTint"
       >
         Submit
       </button>
