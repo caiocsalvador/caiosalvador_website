@@ -13,14 +13,14 @@ const ExperimentItems = [
 const Experiments = () => {
   return (
     <div className="container mx-auto">
-      <h2 className="font-league_spartan mb-4 text-center text-6xl font-semibold">Experiments</h2>
-      <h3 className="font-league_spartan mb-20 text-center text-lg">
+      <h2 className="mb-4 text-center font-league_spartan text-6xl font-semibold">Experiments</h2>
+      <h3 className="mb-20 text-center font-league_spartan text-lg">
         Some personal and fun projects I put together on my spare time
       </h3>
       <div className="grid grid-cols-3 gap-6">
         <div className="col-span-1 mb-auto mt-auto h-auto bg-gradient-to-r from-[#9A687B] to-[#380C1D4D] p-2">
           <div className="bg-transparent_black p-5">
-            <p className="font-league_spartan text-white text-center text-3xl">More coming soon...</p>
+            <p className="text-center font-league_spartan text-3xl text-white">More coming soon...</p>
           </div>
         </div>
         {ExperimentItems.map((item, index) => (
@@ -34,7 +34,7 @@ const Experiments = () => {
         ))}
         <div className="col-span-1 mb-auto mt-auto bg-gradient-to-r from-[#04D361CC] to-[#04D36133] p-2">
           <div className="bg-transparent_black p-5">
-            <p className="font-league_spartan text-white text-center text-3xl">I hope</p>
+            <p className="text-center font-league_spartan text-3xl text-white">Coming soon...</p>
           </div>
         </div>
       </div>
