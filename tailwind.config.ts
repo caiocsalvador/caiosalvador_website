@@ -29,7 +29,7 @@ const config: Config = {
         lightGray: "#FEFEFE",
         gray: "#CACACA",
         transparent_black: "rgba(0, 0, 0, 0.20);",
-        transparent_white: "rgba(255, 255, 255, 0.1)",
+        transparent_white: "rgba(255, 255, 255, 0.05)",
         gradient_blue: "#54A7E4",
         gradient_purple: "#8067C7",
         about_gcolor1: "#8A5DF3CC",

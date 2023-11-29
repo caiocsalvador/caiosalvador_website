@@ -82,8 +82,9 @@ const DataAnalysisSkills = [
 
 const Skills = () => {
   return (
-    <div className="container mx-auto">
-      <h2 className="font-league_spartan mb-10 text-center text-6xl font-semibold">Skills &amp; Tools</h2>
+    <div className="container relative mx-auto">
+      <div id="skills" className="absolute left-0 top-[-100px]"></div>
+      <h2 className="mb-10 text-center font-league_spartan text-6xl font-semibold">Skills &amp; Tools</h2>
       <div className="grid grid-cols-4 gap-4">
         <SkillsBox type="small" color={"green" as Color} title="Digital Marketing" skills={DigitalMarketingSkills} />
         <SkillsBox

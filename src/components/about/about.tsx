@@ -9,9 +9,10 @@ type AboutProps = {
   github: string;
 };
 
-const About = ({ text, image, linkedin, github }: AboutProps) => {
+const About = ({ text, image }: AboutProps) => {
   return (
-    <div className="mx-auto w-[850px]">
+    <div className="relative mx-auto w-[850px]">
+      <div id="about" className="absolute left-0 top-[-100px]"></div>
       <h2 className="mb-10 text-center font-league_spartan text-6xl font-semibold">About me</h2>
       <div className="grid grid-cols-3 gap-2 bg-gradient-to-r from-about_gcolor1 to-about_gcolor2">
         <div className="col-span-2 flex flex-col justify-center bg-transparent_black p-10">
@@ -22,7 +23,7 @@ const About = ({ text, image, linkedin, github }: AboutProps) => {
             <Image src={image} alt="Caio Salvador" className="rounded-full" width={250} height={250} />
           </div>
           <div className="mt-12 flex flex-row justify-center">
-            <Social size={8} />
+            <Social size="lg" />
           </div>
         </div>
       </div>

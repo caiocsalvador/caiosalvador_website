@@ -46,8 +46,9 @@ const experienceItems = [
 
 const Experience = () => {
   return (
-    <div className="container mx-auto">
-      <h2 className="font-league_spartan mb-10 text-center text-6xl font-semibold">Experience</h2>
+    <div className="container relative mx-auto">
+      <div id="experience" className="absolute left-0 top-[-100px]"></div>
+      <h2 className="mb-10 text-center font-league_spartan text-6xl font-semibold">Experience</h2>
       <div className="grid grid-flow-row grid-cols-2 grid-rows-3 gap-4">
         {experienceItems.map((item, index) => (
           <ExperienceItem

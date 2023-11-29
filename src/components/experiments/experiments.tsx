@@ -12,7 +12,8 @@ const ExperimentItems = [
 
 const Experiments = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container relative mx-auto">
+      <div id="experiments" className="absolute left-0 top-[-100px]"></div>
       <h2 className="mb-4 text-center font-league_spartan text-6xl font-semibold">Experiments</h2>
       <h3 className="mb-20 text-center font-league_spartan text-lg">
         Some personal and fun projects I put together on my spare time

@@ -9,10 +9,10 @@ const sendEmail = async (formData: ContactFormData) => {
   })
     .then((res) => res.json())
     .then((response) => {
-      alert(response.message);
+      console.log(response.info);
     })
     .catch((err) => {
-      alert(err);
+      console.log(err);
     });
 };
 
