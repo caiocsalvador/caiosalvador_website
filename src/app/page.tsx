@@ -7,8 +7,6 @@ import Experiments from "@/components/experiments/experiments";
 import Contact from "@/components/contact/contact";
 
 export default function Home() {
-  const linkedin = "https://www.linkedin.com/in/caio-c%C3%A9sar-salvador-santos-3a622b94/";
-  const github = "https://github.com/caiocsalvador";
   const image = "/images/caio.png";
   const text = `
   I'm a Full-stack Developer with over 10 years experience, bachelor in information systems. Passionate about technology and always looking for new challenges and opportunities to improve and learn new skills. During my careers I've worked with a wide range of technologies and frameworks which helped me to become more adaptive, trying to always use the best tool for the job. I'm currently working with React, Next.js, and Node.js. 
@@ -34,7 +32,7 @@ export default function Home() {
         <Experience />
       </section>
       <section className="py-20">
-        <About text={text} image={image} linkedin={linkedin} github={github} />
+        <About text={text} image={image} />
       </section>
       <section className="py-20">
         <Experiments />

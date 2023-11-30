@@ -5,8 +5,6 @@ import Social from "../social/social";
 type AboutProps = {
   text: string;
   image: string;
-  linkedin: string;
-  github: string;
 };
 
 const About = ({ text, image }: AboutProps) => {

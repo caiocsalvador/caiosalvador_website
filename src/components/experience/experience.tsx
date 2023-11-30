@@ -36,7 +36,7 @@ const experienceItems = [
   },
   {
     title: "Software Engineering at Velty",
-    startDate: "2014",
+    startDate: "2011",
     endDate: "2015",
     description:
       "A small startup, my work there was very adaptive/reactive. I took part on each step of web-based apps development. Customer meetings, requirements gathering, software architecture, database design, web development and even customer training. Most projects were developed using Yii Framework, PHP, MySQL, Sass, Bootstrap, JQuery.",
