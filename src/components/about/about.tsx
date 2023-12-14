@@ -1,24 +1,51 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import Image from "next/image";
 import Social from "../social/social";
+import { PortableText } from "@portabletext/react";
+import sanityClient from "@/sanity/client";
 
 type AboutProps = {
   text: string;
   image: string;
 };
 
-const About = ({ text, image }: AboutProps) => {
+async function getAboutData() {
+  // Returns the first/only document in the dataset with the title "About me"
+  const query = `
+  *[_type == "sections" && title == "About me"][0] {
+    title,
+    text,
+    'imageUrl': image.asset->url,
+  }
+  `;
+  const about = await sanityClient.fetch(query);
+  // This will activate the closest `error.js` Error Boundary
+  if (!about) {
+    throw new Error("Error fetching data");
+  }
+
+  return about;
+}
+
+const About = async ({ text, image }: AboutProps) => {
+  const data = await getAboutData();
+  console.log("data.text", data.text);
+
+  const components = {
+    block: ({ children }: any) => <div className="mb-2">{children}</div>,
+  };
+
   return (
     <div className="relative mx-auto w-[850px]">
       <div id="about" className="absolute left-0 top-[-100px]"></div>
-      <h2 className="mb-10 text-center font-league_spartan text-6xl font-semibold">About me</h2>
+      <h2 className="mb-10 text-center font-league_spartan text-6xl font-semibold">{data.title}</h2>
       <div className="grid grid-cols-3 gap-2 bg-gradient-to-r from-about_gcolor1 to-about_gcolor2">
         <div className="col-span-2 flex flex-col justify-center bg-transparent_black p-10">
-          <p>{text}</p>
+          <PortableText value={data.text} components={components} />
         </div>
         <div className="flex flex-col p-5 pt-10">
           <div className="rounded-full bg-white p-1">
-            <Image src={image} alt="Caio Salvador" className="rounded-full" width={250} height={250} />
+            <Image src={data.imageUrl} alt="Caio Salvador" className="rounded-full" width={250} height={250} />
           </div>
           <div className="mt-12 flex flex-row justify-center">
             <Social size="lg" />

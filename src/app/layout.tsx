@@ -7,6 +7,7 @@ import { inter, league_spartan } from "@/utils/fonts";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import UnderConstruction from "@/components/temp/under-construction";
+import Providers from "./providers";
 
 export const metadata: Metadata = {
   title: "Caio Salvador - Full-stack Developer",
@@ -19,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.variable} ${league_spartan.variable} antialiased`}>
         <UnderConstruction />
         <Header />
-        {children}
+        <Providers>{children}</Providers>
         <Footer />
       </body>
     </html>
