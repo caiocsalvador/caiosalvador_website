@@ -1,35 +1,15 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import Image from "next/image";
 import Social from "../social/social";
 import { PortableText } from "@portabletext/react";
-import sanityClient from "@/sanity/client";
+import useAboutData from "@/sanity/hooks/useAboutData";
 
 type AboutProps = {
   text: string;
   image: string;
 };
 
-async function getAboutData() {
-  // Returns the first/only document in the dataset with the title "About me"
-  const query = `
-  *[_type == "sections" && title == "About me"][0] {
-    title,
-    text,
-    'imageUrl': image.asset->url,
-  }
-  `;
-  const about = await sanityClient.fetch(query);
-  // This will activate the closest `error.js` Error Boundary
-  if (!about) {
-    throw new Error("Error fetching data");
-  }
-
-  return about;
-}
-
 const About = async ({ text, image }: AboutProps) => {
-  const data = await getAboutData();
-  console.log("data.text", data.text);
+  const data = await useAboutData();
 
   const components = {
     block: ({ children }: any) => <div className="mb-2">{children}</div>,

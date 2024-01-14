@@ -7,6 +7,7 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/utils/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: ["order-1", "order-2", "order-3", "order-4", "order-5"],
   theme: {
     extend: {
       fontFamily: {
