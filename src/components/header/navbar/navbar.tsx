@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FaX } from "react-icons/fa6";
 
 type NavbarProps = {
-  onClose: Function;
+  onClose?: Function;
 };
 
 const Navbar = ({ onClose }: NavbarProps) => {
