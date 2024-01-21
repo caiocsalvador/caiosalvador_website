@@ -37,24 +37,53 @@ const ContactForm = () => {
   return (
     <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
       <div className="grid grid-cols-2 gap-6">
-        <input
-          type="text"
-          placeholder="Name"
-          className="border-gray-300 line-height-10 color-white mb-5 h-10 w-full rounded-lg border border-blue bg-transparent_white px-4 focus:border-purple focus:outline-none focus:ring-1"
-          {...register("name", { required: true })}
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          className="border-gray-300 line-height-10 color-white mb-5 h-10 w-full rounded-lg border border-blue bg-transparent_white px-4 focus:border-purple focus:outline-none focus:ring-1"
-          {...register("email", { required: true })}
-        />
+        <div>
+          <input
+            type="text"
+            placeholder="Name"
+            className="border-gray-300 line-height-10 color-white mb-5 h-10 w-full rounded-lg border border-blue bg-transparent_white px-4 focus:border-purple focus:outline-none focus:ring-1"
+            {...register("name", {
+              required: {
+                value: true,
+                message: "This field is required",
+              },
+            })}
+          />
+          {errors.name && <p className="mb-2 mt-[-12px] w-full text-sm text-rose-500">{errors.name.message}</p>}
+        </div>
+        <div>
+          <input
+            type="email"
+            placeholder="Email"
+            className="border-gray-300 line-height-10 color-white mb-5 h-10 w-full rounded-lg border border-blue bg-transparent_white px-4 focus:border-purple focus:outline-none focus:ring-1"
+            {...register("email", {
+              required: {
+                value: true,
+                message: "This field is required",
+              },
+              pattern: {
+                value: /\S+@\S+\.\S+/,
+                message: "Entered value does not match email format",
+              },
+            })}
+          />
+          {errors.email && <p className="mb-2 mt-[-12px] w-full text-sm text-rose-500">{errors.email.message}</p>}
+        </div>
       </div>
-      <textarea
-        placeholder="Message"
-        className="border-gray-300 line-height-10 color-white mb-5 h-[200px] w-full resize-none rounded-lg border border-blue bg-transparent_white px-4 py-2 focus:border-purple focus:outline-none focus:ring-1"
-        {...register("message", { required: true })}
-      />
+      <div>
+        <textarea
+          placeholder="Message"
+          className="border-gray-300 line-height-10 color-white mb-5 h-[200px] w-full resize-none rounded-lg border border-blue bg-transparent_white px-4 py-2 focus:border-purple focus:outline-none focus:ring-1"
+          {...register("message", {
+            required: {
+              value: true,
+              message: "This field is required",
+            },
+          })}
+        />
+        {errors.message && <p className="mb-2 mt-[-14px] w-full text-sm text-rose-500">This is required.</p>}
+      </div>
+
       <div className="flex">
         <div className="flex rounded-xl p-2">
           <h3 className="mr-4 text-xs sm:text-lg">Or find me here:</h3>
