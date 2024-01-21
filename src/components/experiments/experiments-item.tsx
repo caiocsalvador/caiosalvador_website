@@ -14,20 +14,20 @@ const ExperimentItem = ({ title, description, tags, url, repo }: ExperimentItemP
   return (
     <Link href={url} target="_blank">
       <div className="bg-gradient-to-r from-[#268EC5] to-[#268EC533] p-2">
-        <div className="bg-transparent_black p-5">
+        <div className="bg-transparent_black p-3 lg:p-5">
           <div className="flex justify-between">
             <Link href={repo} target="_blank">
-              <FaGithub className="text-gray-500 h-7 w-7 transition-all hover:text-blue" />
+              <FaGithub className="text-gray-500 h-4 w-4 transition-all hover:text-blue lg:h-7 lg:w-7" />
             </Link>
             <Link href={repo} target="_blank">
-              <FaArrowUpRightFromSquare className="text-gray-500 h-7 w-7 transition-all hover:text-blue" />
+              <FaArrowUpRightFromSquare className="text-gray-500 h-4 w-4 transition-all hover:text-blue  lg:h-7 lg:w-7" />
             </Link>
           </div>
-          <h3 className="mb-5 mt-8 font-league_spartan text-4xl font-semibold">{title}</h3>
-          <p>{description}</p>
-          <div className="mt-10 flex flex-row">
+          <h3 className="mb-3 mt-4 font-league_spartan text-xl font-semibold lg:mb-5 lg:mt-8 lg:text-4xl">{title}</h3>
+          <p className="lg:text-md text-sm">{description}</p>
+          <div className="mt-3 flex flex-row flex-wrap lg:mt-6">
             {tags.map((tag, index) => (
-              <p key={index} className="mr-4 font-semibold">
+              <p key={index} className="mr-4 font-semibold leading-8 md:max-xl:text-sm md:max-xl:leading-6">
                 {tag}
               </p>
             ))}

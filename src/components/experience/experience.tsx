@@ -9,7 +9,7 @@ const Experience = async () => {
   return (
     <div className="container relative mx-auto">
       <div id="experience" className="absolute left-0 top-[-100px]"></div>
-      <h2 className="mb-10 text-center font-league_spartan text-6xl font-semibold">Experience</h2>
+      <h2 className="mb-10 text-center font-league_spartan text-5xl font-semibold xl:text-6xl">Experience</h2>
       <div className="grid grid-flow-row grid-cols-2 grid-rows-3 gap-4">
         {experiences.map((item: any, index: number) => (
           <ExperienceItem

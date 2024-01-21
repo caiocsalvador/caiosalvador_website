@@ -3,12 +3,7 @@ import Social from "../social/social";
 import { PortableText } from "@portabletext/react";
 import useAboutData from "@/sanity/hooks/useAboutData";
 
-type AboutProps = {
-  text: string;
-  image: string;
-};
-
-const About = async ({ text, image }: AboutProps) => {
+const About = async () => {
   const data = await useAboutData();
 
   const components = {
@@ -16,9 +11,9 @@ const About = async ({ text, image }: AboutProps) => {
   };
 
   return (
-    <div className="relative mx-auto w-[850px]">
+    <div className="container relative mx-auto md:w-[850px]">
       <div id="about" className="absolute left-0 top-[-100px]"></div>
-      <h2 className="mb-10 text-center font-league_spartan text-6xl font-semibold">{data.title}</h2>
+      <h2 className="mb-10 text-center font-league_spartan text-5xl font-semibold xl:text-6xl">{data.title}</h2>
       <div className="grid grid-cols-3 gap-2 bg-gradient-to-r from-about_gcolor1 to-about_gcolor2">
         <div className="col-span-2 flex flex-col justify-center bg-transparent_black p-10">
           <PortableText value={data.text} components={components} />

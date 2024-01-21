@@ -84,17 +84,29 @@ const Skills = () => {
   return (
     <div className="container relative mx-auto">
       <div id="skills" className="absolute left-0 top-[-100px]"></div>
-      <h2 className="mb-10 text-center font-league_spartan text-6xl font-semibold">Skills &amp; Tools</h2>
-      <div className="grid grid-cols-4 gap-4">
-        <SkillsBox type="small" color={"green" as Color} title="Digital Marketing" skills={DigitalMarketingSkills} />
+      <h2 className="mb-10 text-center font-league_spartan text-5xl font-semibold xl:text-6xl">Skills &amp; Tools</h2>
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-4">
+        <SkillsBox
+          type="small"
+          color={"green" as Color}
+          title="Digital Marketing"
+          className="order-2 lg:order-none"
+          skills={DigitalMarketingSkills}
+        />
         <SkillsBox
           type="large"
           color={"blue" as Color}
           title="Full-Stack Development"
           skills={FullStackSkills}
-          className="col-span-2"
+          className="order-1 lg:order-none lg:col-span-2"
         />
-        <SkillsBox type="small" color={"purple" as Color} title="Data Analysis" skills={DataAnalysisSkills} />
+        <SkillsBox
+          type="small"
+          color={"purple" as Color}
+          title="Data Analysis"
+          className="order-3 lg:order-none"
+          skills={DataAnalysisSkills}
+        />
       </div>
     </div>
   );

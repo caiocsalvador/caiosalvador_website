@@ -7,9 +7,9 @@ const Hero = () => {
     <div className="container mx-auto font-league_spartan">
       <div className="grid grid-cols-2 gap-6">
         <div className="self-center">
-          <h4 className="mb-3 text-2xl">Hello, my name is</h4>
-          <h1 className="mb-3 text-6xl font-bold">Caio Salvador</h1>
-          <h2 className="mb-8 text-4xl">
+          <h4 className="mb-3 text-2xl">Hello, I am</h4>
+          <h1 className="mb-3 text-5xl font-bold lg:text-6xl">Caio Salvador</h1>
+          <h2 className="mb-8 text-2xl lg:text-4xl">
             A Full-stack Developer with experience on Digital Marketing and Data Analysis
           </h2>
           <button
