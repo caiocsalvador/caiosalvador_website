@@ -24,7 +24,7 @@ const ExperimentItem = ({ title, description, tags, url, repo }: ExperimentItemP
             </Link>
           </div>
           <h3 className="mb-3 mt-4 font-league_spartan text-xl font-semibold lg:mb-5 lg:mt-8 lg:text-4xl">{title}</h3>
-          <p className="lg:text-md text-sm">{description}</p>
+          <p className="text-sm lg:text-base">{description}</p>
           <div className="mt-3 flex flex-row flex-wrap lg:mt-6">
             {tags.map((tag, index) => (
               <p key={index} className="mr-4 font-semibold leading-8 md:max-xl:text-sm md:max-xl:leading-6">

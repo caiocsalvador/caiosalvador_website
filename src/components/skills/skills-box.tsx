@@ -38,7 +38,7 @@ const SkillsBox: React.FC<SkillsBoxProps> = ({ type, color, title, skills, class
               <ul className="flex list-inside list-disc flex-wrap">
                 {skills.map((skill) => (
                   <li
-                    className={`mb-3 w-1/2 md:w-1/4 md:max-xl:text-xs lg:w-[33%] ${colorVariants[color].list}`}
+                    className={`mb-3 w-1/2 text-xs md:w-1/4 md:text-xs lg:w-[33%] xl:text-base ${colorVariants[color].list}`}
                     key={skill}
                   >
                     {skill}
@@ -60,9 +60,11 @@ const SkillsBox: React.FC<SkillsBoxProps> = ({ type, color, title, skills, class
           >
             {title}
           </h3>
-          <ul className={`flex list-inside list-disc flex-wrap ${colorVariants[color].list}`}>
+          <ul
+            className={`ml-4 flex list-outside list-disc flex-wrap indent-2 md:ml-0 md:list-inside ${colorVariants[color].list}`}
+          >
             {skills.map((skill) => (
-              <li key={skill} className="mb-3 w-1/2 md:w-1/3 md:max-xl:text-xs lg:w-full">
+              <li key={skill} className="mb-3 w-1/2 text-xs md:w-1/3 md:max-xl:text-xs lg:w-full xl:text-base">
                 {skill}
               </li>
             ))}

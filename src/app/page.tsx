@@ -9,22 +9,22 @@ import Contact from "@/components/contact/contact";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
-      <section className="py-20 pt-36">
+      <section className="px-4 py-10 pt-10 md:py-20 md:pt-36 lg:px-0">
         <Hero />
       </section>
-      <section className="py-20">
+      <section className="px-4 py-10 md:py-20 lg:px-0">
         <Skills />
       </section>
-      <section className="py-20">
+      <section className="px-4 py-10 md:py-20 lg:px-0">
         <Experience />
       </section>
-      <section className="py-20">
+      <section className="px-4 py-10 md:py-20 lg:px-0">
         <About />
       </section>
-      <section className="py-20">
+      <section className="px-4 py-10 md:py-20 lg:px-0">
         <Experiments />
       </section>
-      <section className="py-20">
+      <section className="px-4 py-10 md:py-20 lg:px-0">
         <Contact />
       </section>
     </main>

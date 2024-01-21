@@ -17,7 +17,9 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-10 py-5  ${scrollTop > 50 ? "bg-gradient-to-r from-navy from-100% to-red" : ""}`}
+      className={`sticky top-0 z-10 px-4 py-5 md:px-0 ${
+        scrollTop > 50 ? "bg-gradient-to-r from-navy from-100% to-red" : ""
+      }`}
     >
       <div className="container relative mx-auto flex justify-between font-league_spartan">
         <Image src="/images/logo.svg" alt="Caio Salvador Logo" width={190} height={42} />
