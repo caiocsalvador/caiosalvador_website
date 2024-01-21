@@ -7,7 +7,7 @@ type SocialProps = {
 
 const Social = ({ size }: SocialProps) => {
   return (
-    <div className="flex cursor-pointer items-center space-x-5 text-white">
+    <div className="flex cursor-pointer items-center space-x-3 text-white sm:space-x-5">
       <a
         href="https://www.linkedin.com/in/caio-c%C3%A9sar-salvador-santos-3a622b94/"
         className={`text-${size === "lg" ? "2xl" : "md"}`}

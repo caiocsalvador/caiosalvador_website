@@ -57,7 +57,7 @@ const ContactForm = () => {
       />
       <div className="flex">
         <div className="flex rounded-xl p-2">
-          <h3 className="mr-4 text-lg">Or find me here:</h3>
+          <h3 className="mr-4 text-xs sm:text-lg">Or find me here:</h3>
           <Social />
         </div>
         <button

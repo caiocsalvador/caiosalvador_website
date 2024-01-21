@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FaX } from "react-icons/fa6";
 
 type NavbarProps = {
-  onClose?: Function;
+  onClose: Function;
 };
 
 const Navbar = ({ onClose }: NavbarProps) => {
@@ -12,31 +12,41 @@ const Navbar = ({ onClose }: NavbarProps) => {
       <nav className="flex flex-col text-lg lg:flex-row lg:space-x-14">
         <a
           className="cursor-pointer transition-all hover:text-blue"
-          onClick={() => document.getElementById("skills")!.scrollIntoView({ behavior: "smooth", block: "start" })}
+          onClick={() => {
+            document.getElementById("skills")!.scrollIntoView({ behavior: "smooth", block: "start" }), onClose();
+          }}
         >
           Skills
         </a>
         <a
           className="cursor-pointer transition-all hover:text-blue"
-          onClick={() => document.getElementById("experience")!.scrollIntoView({ behavior: "smooth", block: "start" })}
+          onClick={() => {
+            document.getElementById("experience")!.scrollIntoView({ behavior: "smooth", block: "start" }), onClose();
+          }}
         >
           Experience
         </a>
         <a
           className="cursor-pointer transition-all hover:text-blue"
-          onClick={() => document.getElementById("about")!.scrollIntoView({ behavior: "smooth", block: "start" })}
+          onClick={() => {
+            document.getElementById("about")!.scrollIntoView({ behavior: "smooth", block: "start" }), onClose();
+          }}
         >
           About me
         </a>
         <a
           className="cursor-pointer transition-all hover:text-blue"
-          onClick={() => document.getElementById("experiments")!.scrollIntoView({ behavior: "smooth", block: "start" })}
+          onClick={() => {
+            document.getElementById("experiments")!.scrollIntoView({ behavior: "smooth", block: "start" }), onClose();
+          }}
         >
           Experiments
         </a>
         <a
           className="cursor-pointer transition-all hover:text-blue"
-          onClick={() => document.getElementById("contact")!.scrollIntoView({ behavior: "smooth", block: "start" })}
+          onClick={() => {
+            document.getElementById("contact")!.scrollIntoView({ behavior: "smooth", block: "start" }), onClose();
+          }}
         >
           Contact
         </a>

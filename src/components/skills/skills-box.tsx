@@ -64,7 +64,7 @@ const SkillsBox: React.FC<SkillsBoxProps> = ({ type, color, title, skills, class
             className={`ml-4 flex list-outside list-disc flex-wrap indent-2 md:ml-0 md:list-inside ${colorVariants[color].list}`}
           >
             {skills.map((skill) => (
-              <li key={skill} className="mb-3 w-1/2 text-xs md:w-1/3 md:max-xl:text-xs lg:w-full xl:text-base">
+              <li key={skill} className="mb-3 w-1/2 indent-0 text-xs md:w-1/3 md:max-xl:text-xs lg:w-full xl:text-base">
                 {skill}
               </li>
             ))}

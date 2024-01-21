@@ -8,7 +8,7 @@ const MobileHeader = () => {
   return (
     <div className="flex lg:hidden">
       <Social />
-      <div className="my-auto ml-10" onClick={() => setIsOpen(!isOpen)}>
+      <div className="my-auto ml-3 sm:ml-10" onClick={() => setIsOpen(!isOpen)}>
         <FaBars className="text-2xl" />
       </div>
       <div className={isOpen ? "flex" : "hidden"}>
