@@ -48,7 +48,9 @@ const SkillsBox: React.FC<SkillsBoxProps> = ({ type, color, title, skills, class
             </div>
             <div className="ml-4 mt-16 hidden h-[370px] w-[2px] flex-shrink-0 bg-gradient-to-b from-gradient_blue to-gradient_purple lg:block"></div>
           </div>
-          <h4 className="font-lg mt-6 hidden text-center font-league_spartan font-light lg:block">Always leaning...</h4>
+          <h4 className="font-lg mt-6 hidden text-center font-league_spartan font-light lg:block">
+            Studying HTMX, GO, and Unreal Engine 5
+          </h4>
         </div>
       );
     // If the type is not large, it will default to small
