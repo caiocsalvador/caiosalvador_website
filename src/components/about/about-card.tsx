@@ -19,26 +19,29 @@ const AboutCard = ({ title, text, imageUrl }: AboutCardProps) => {
   const aboutContainer = useRef(null);
   useGSAP(
     () => {
+      let mm = gsap.matchMedia();
       gsap.registerPlugin(ScrollTrigger);
-      gsap.from(".aboutText", {
-        scrollTrigger: {
-          trigger: aboutContainer.current,
-          start: "top 80%",
-        },
-        x: 350,
-        opacity: 0,
-        duration: 1,
-        ease: "back",
-      });
-      gsap.from(".aboutImage", {
-        scrollTrigger: {
-          trigger: aboutContainer.current,
-          start: "top 80%",
-        },
-        opacity: 0,
-        duration: 1.5,
-        scale: 0.2,
-        ease: "back",
+      mm.add("(min-width: 1000px)", () => {
+        gsap.from(".aboutText", {
+          scrollTrigger: {
+            trigger: aboutContainer.current,
+            start: "top 80%",
+          },
+          x: 350,
+          opacity: 0,
+          duration: 1,
+          ease: "back",
+        });
+        gsap.from(".aboutImage", {
+          scrollTrigger: {
+            trigger: aboutContainer.current,
+            start: "top 80%",
+          },
+          opacity: 0,
+          duration: 1.5,
+          scale: 0.2,
+          ease: "back",
+        });
       });
     },
     { scope: aboutContainer }

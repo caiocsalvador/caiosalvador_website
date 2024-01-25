@@ -17,29 +17,32 @@ type ExperienceItemProps = {
 
 const ExperienceItem = ({ title, startDate, endDate, description, color, className }: ExperienceItemProps) => {
   // Animations
+  let mm = gsap.matchMedia();
   const experiecesContainer = useRef(null);
   useGSAP(
     () => {
       gsap.registerPlugin(ScrollTrigger);
-      gsap.from([".experience.order-1", ".experience.order-4"], {
-        scrollTrigger: {
-          trigger: experiecesContainer.current,
-          start: "top 80%",
-        },
-        x: -100,
-        opacity: 0,
-        duration: 1,
-        ease: "elastic",
-      });
-      gsap.from([".experience.order-2", ".experience.order-3", ".experience.order-5"], {
-        scrollTrigger: {
-          trigger: experiecesContainer.current,
-          start: "top 80%",
-        },
-        x: 100,
-        opacity: 0,
-        duration: 1,
-        ease: "elastic",
+      mm.add("(min-width: 1000px)", () => {
+        gsap.from([".experience.order-1", ".experience.order-4"], {
+          scrollTrigger: {
+            trigger: experiecesContainer.current,
+            start: "top 80%",
+          },
+          x: -100,
+          opacity: 0,
+          duration: 1,
+          ease: "elastic",
+        });
+        gsap.from([".experience.order-2", ".experience.order-3", ".experience.order-5"], {
+          scrollTrigger: {
+            trigger: experiecesContainer.current,
+            start: "top 80%",
+          },
+          x: 100,
+          opacity: 0,
+          duration: 1,
+          ease: "elastic",
+        });
       });
     },
     { scope: experiecesContainer }

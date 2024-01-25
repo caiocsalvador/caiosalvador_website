@@ -87,36 +87,39 @@ const Skills = () => {
   const boxcontainer = useRef(null);
   useGSAP(
     () => {
+      let mm = gsap.matchMedia();
       gsap.registerPlugin(ScrollTrigger);
-      gsap.from(".box1", {
-        scrollTrigger: {
-          trigger: boxcontainer.current,
-          start: "top 60%",
-        },
-        x: -350,
-        opacity: 0,
-        duration: 1.5,
-        ease: "bounce",
-      });
-      gsap.from(".box2", {
-        scrollTrigger: {
-          trigger: boxcontainer.current,
-          start: "top 60%",
-        },
-        y: 350,
-        opacity: 0,
-        duration: 1,
-        ease: "back",
-      });
-      gsap.from(".box3", {
-        scrollTrigger: {
-          trigger: boxcontainer.current,
-          start: "top 60%",
-        },
-        x: 350,
-        opacity: 0,
-        duration: 1.5,
-        ease: "bounce",
+      mm.add("(min-width: 1000px)", () => {
+        gsap.from(".box1", {
+          scrollTrigger: {
+            trigger: boxcontainer.current,
+            start: "top 60%",
+          },
+          x: -350,
+          opacity: 0,
+          duration: 1.5,
+          ease: "bounce",
+        });
+        gsap.from(".box2", {
+          scrollTrigger: {
+            trigger: boxcontainer.current,
+            start: "top 60%",
+          },
+          y: 350,
+          opacity: 0,
+          duration: 1,
+          ease: "back",
+        });
+        gsap.from(".box3", {
+          scrollTrigger: {
+            trigger: boxcontainer.current,
+            start: "top 60%",
+          },
+          x: 350,
+          opacity: 0,
+          duration: 1.5,
+          ease: "bounce",
+        });
       });
     },
     { scope: boxcontainer }

@@ -15,16 +15,19 @@ const ContactForm = () => {
   const formContainer = useRef(null);
   useGSAP(
     () => {
+      let mm = gsap.matchMedia();
       gsap.registerPlugin(ScrollTrigger);
-      gsap.from(".animateInput", {
-        scrollTrigger: {
-          trigger: formContainer.current,
-          start: "top 80%",
-        },
-        y: -100,
-        opacity: 0,
-        duration: 1,
-        ease: "back",
+      mm.add("(min-width: 1000px)", () => {
+        gsap.from(".animateInput", {
+          scrollTrigger: {
+            trigger: formContainer.current,
+            start: "top 80%",
+          },
+          y: -100,
+          opacity: 0,
+          duration: 1,
+          ease: "back",
+        });
       });
     },
     { scope: formContainer }

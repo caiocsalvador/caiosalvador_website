@@ -20,16 +20,19 @@ const ExperimentItem = ({ title, description, tags, url, repo }: ExperimentItemP
   const experimentscontainer = useRef(null);
   useGSAP(
     () => {
+      let mm = gsap.matchMedia();
       gsap.registerPlugin(ScrollTrigger);
-      gsap.from(".experimentBox", {
-        scrollTrigger: {
-          trigger: experimentscontainer.current,
-          start: "top 80%",
-        },
-        y: 150,
-        opacity: 0,
-        duration: 1,
-        ease: "back",
+      mm.add("(min-width: 1000px)", () => {
+        gsap.from(".experimentBox", {
+          scrollTrigger: {
+            trigger: experimentscontainer.current,
+            start: "top 80%",
+          },
+          y: 150,
+          opacity: 0,
+          duration: 1,
+          ease: "back",
+        });
       });
     },
     { scope: experimentscontainer }
