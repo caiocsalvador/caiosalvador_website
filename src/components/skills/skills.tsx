@@ -89,7 +89,7 @@ const Skills = () => {
     () => {
       let mm = gsap.matchMedia();
       gsap.registerPlugin(ScrollTrigger);
-      mm.add("(min-width: 1000px)", () => {
+      mm.add("(min-width: 1025px)", () => {
         gsap.from(".box1", {
           scrollTrigger: {
             trigger: boxcontainer.current,

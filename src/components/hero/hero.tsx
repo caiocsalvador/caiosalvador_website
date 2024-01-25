@@ -46,7 +46,7 @@ const Hero = () => {
   );
 
   return (
-    <div ref={heroContainer} className="container mx-auto font-league_spartan">
+    <div ref={heroContainer} className="container mx-auto overflow-hidden font-league_spartan">
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div className="self-center">
           <h4 className="heroText1 mb-3 text-2xl">Hello, I am</h4>

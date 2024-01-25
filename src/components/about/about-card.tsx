@@ -21,7 +21,7 @@ const AboutCard = ({ title, text, imageUrl }: AboutCardProps) => {
     () => {
       let mm = gsap.matchMedia();
       gsap.registerPlugin(ScrollTrigger);
-      mm.add("(min-width: 1000px)", () => {
+      mm.add("(min-width: 1025px)", () => {
         gsap.from(".aboutText", {
           scrollTrigger: {
             trigger: aboutContainer.current,

@@ -22,7 +22,7 @@ const ExperienceItem = ({ title, startDate, endDate, description, color, classNa
   useGSAP(
     () => {
       gsap.registerPlugin(ScrollTrigger);
-      mm.add("(min-width: 1000px)", () => {
+      mm.add("(min-width: 1025px)", () => {
         gsap.from([".experience.order-1", ".experience.order-4"], {
           scrollTrigger: {
             trigger: experiecesContainer.current,
