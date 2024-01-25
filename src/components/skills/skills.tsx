@@ -1,5 +1,10 @@
+"use client";
+import { useRef } from "react";
 import SkillsBox from "./skills-box";
 import Color from "@/types/color";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const DigitalMarketingSkills = [
   "Inbound Marketing",
@@ -78,16 +83,55 @@ const DataAnalysisSkills = [
 ];
 
 const Skills = () => {
+  // Animations
+  const boxcontainer = useRef(null);
+  useGSAP(
+    () => {
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.from(".box1", {
+        scrollTrigger: {
+          trigger: boxcontainer.current,
+          start: "top 60%",
+        },
+        x: -350,
+        opacity: 0,
+        duration: 1.5,
+        ease: "bounce",
+      });
+      gsap.from(".box2", {
+        scrollTrigger: {
+          trigger: boxcontainer.current,
+          start: "top 60%",
+        },
+        y: 350,
+        opacity: 0,
+        duration: 1,
+        ease: "back",
+      });
+      gsap.from(".box3", {
+        scrollTrigger: {
+          trigger: boxcontainer.current,
+          start: "top 60%",
+        },
+        x: 350,
+        opacity: 0,
+        duration: 1.5,
+        ease: "bounce",
+      });
+    },
+    { scope: boxcontainer }
+  );
+
   return (
     <div className="container relative mx-auto">
       <div id="skills" className="absolute left-0 top-[-100px]"></div>
       <h2 className="mb-10 text-center font-league_spartan text-5xl font-semibold xl:text-6xl">Skills &amp; Tools</h2>
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-4">
+      <div ref={boxcontainer} className="grid grid-cols-1 gap-4 lg:grid-cols-4">
         <SkillsBox
           type="small"
           color={"green" as Color}
           title="Digital Marketing"
-          className="order-2 lg:order-none"
+          className="box1 order-2 lg:order-none"
           skills={DigitalMarketingSkills}
         />
         <SkillsBox
@@ -95,13 +139,13 @@ const Skills = () => {
           color={"blue" as Color}
           title="Full-Stack Development"
           skills={FullStackSkills}
-          className="order-1 lg:order-none lg:col-span-2"
+          className="box2 order-1 lg:order-none lg:col-span-2"
         />
         <SkillsBox
           type="small"
           color={"purple" as Color}
           title="Data Analysis"
-          className="order-3 lg:order-none"
+          className="box3 order-3 lg:order-none"
           skills={DataAnalysisSkills}
         />
       </div>

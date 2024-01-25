@@ -2,7 +2,9 @@ import ExperimentItem from "./experiments-item";
 import useProjectsData from "@/sanity/hooks/useProjectsData";
 
 const Experiments = async () => {
+  // Get Data
   const projects = await useProjectsData();
+
   return (
     <div className="container relative mx-auto">
       <div id="experiments" className="absolute left-0 top-[-100px]"></div>
