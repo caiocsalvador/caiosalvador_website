@@ -93,7 +93,7 @@ const Skills = () => {
         gsap.from(".box1", {
           scrollTrigger: {
             trigger: boxcontainer.current,
-            start: "top 60%",
+            start: "top 80%",
           },
           x: -350,
           opacity: 0,
@@ -103,7 +103,7 @@ const Skills = () => {
         gsap.from(".box2", {
           scrollTrigger: {
             trigger: boxcontainer.current,
-            start: "top 60%",
+            start: "top 80%",
           },
           y: 350,
           opacity: 0,
@@ -113,7 +113,7 @@ const Skills = () => {
         gsap.from(".box3", {
           scrollTrigger: {
             trigger: boxcontainer.current,
-            start: "top 60%",
+            start: "top 80%",
           },
           x: 350,
           opacity: 0,
