@@ -14,13 +14,10 @@ const Social = ({ size }: SocialProps) => {
       >
         <FaLinkedin className={`text-white transition-all hover:text-blue`} />
       </a>
-      <a
-        href="https://www.linkedin.com/in/caio-c%C3%A9sar-salvador-santos-3a622b94/"
-        className={`text-${size === "lg" ? "2xl" : "md"}`}
-      >
+      <a href="https://wa.me/3530899505241" className={`text-${size === "lg" ? "2xl" : "md"}`}>
         <FaWhatsapp className={`text-white transition-all hover:text-blue`} />
       </a>
-      <a href="https://wa.me/3530899505241" className={`text-${size === "lg" ? "2xl" : "md"}`}>
+      <a href="https://github.com/caiocsalvador" className={`text-${size === "lg" ? "2xl" : "md"}`}>
         <FaGithub className={`text-white transition-all hover:text-blue`} />
       </a>
     </div>

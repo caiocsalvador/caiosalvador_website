@@ -12,35 +12,51 @@ const Hero = () => {
     () => {
       const heroTextAnimation = gsap.timeline();
       heroTextAnimation.from(".heroText1", {
-        x: 350,
-        opacity: 0,
-        duration: 1,
-        ease: "back",
-      });
-      heroTextAnimation.from(".heroText2", {
-        opacity: 0,
-        duration: 1,
-        scale: 0.2,
-        ease: "back",
-      });
-      heroTextAnimation.from(".heroText3", {
-        opacity: 0,
-        duration: 1,
-        x: 350,
-        ease: "back",
-      });
-      heroTextAnimation.from(".heroButton", {
-        opacity: 0,
-        duration: 1,
         x: -350,
-        ease: "back",
-      });
-      heroTextAnimation.from(".hero-image", {
         opacity: 0,
         duration: 1,
-        x: 350,
-        ease: "bounce",
+        ease: "back",
       });
+      heroTextAnimation.from(
+        ".heroText2",
+        {
+          opacity: 0,
+          duration: 1,
+          scale: 0.2,
+          ease: "back",
+        },
+        0.5
+      );
+      heroTextAnimation.from(
+        ".heroText3",
+        {
+          opacity: 0,
+          duration: 1,
+          x: -350,
+          ease: "back",
+        },
+        1
+      );
+      heroTextAnimation.from(
+        ".heroButton",
+        {
+          opacity: 0,
+          duration: 1,
+          x: -350,
+          ease: "back",
+        },
+        1.5
+      );
+      heroTextAnimation.from(
+        ".hero-image",
+        {
+          opacity: 0,
+          duration: 1,
+          x: 350,
+          ease: "bounce",
+        },
+        2
+      );
     },
     { scope: heroContainer }
   );
