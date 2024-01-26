@@ -80,7 +80,14 @@ const Hero = () => {
           </div>
         </div>
         <div className="heroImage hero-image hidden md:flex">
-          <Image className="ml-auto" src="images/hero.svg" alt="Hero Illustration" width={506} height={368} />
+          <Image
+            className="ml-auto"
+            src="images/hero.svg"
+            alt="Hero Illustration"
+            width={506}
+            height={368}
+            loading="eager"
+          />
         </div>
       </div>
     </div>
