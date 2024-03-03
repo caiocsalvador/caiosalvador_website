@@ -7,6 +7,7 @@ import Image from "next/image";
 import Social from "../social/social";
 import { PortableText } from "@portabletext/react";
 import { TypedObject } from "sanity";
+import Link from "next/link";
 
 type AboutCardProps = {
   title: string;
@@ -67,7 +68,10 @@ const AboutCard = ({ title, text, imageUrl }: AboutCardProps) => {
           <div className="aboutImage max-h-[250px] max-w-[250px] rounded-full bg-white p-1">
             <Image src={imageUrl} alt="Caio Salvador" className="rounded-full" width={250} height={250} />
           </div>
-          <div className="mt-6 flex flex-row justify-center md:mt-12">
+          <Link target="_blank" className="mt-4 text-sm underline" href="caio_cesar_salvador_santos_cv.pdf">
+            Download my CV
+          </Link>
+          <div className="mt-6 flex flex-row justify-center md:mt-10">
             <Social size="lg" />
           </div>
         </div>
