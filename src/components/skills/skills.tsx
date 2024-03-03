@@ -13,8 +13,7 @@ const DigitalMarketingSkills = [
   "Marketing Automation",
   "Lead Nurturing",
   "HubSpot",
-  "Google Ads",
-  "Social Media Ads",
+  "Paid Ads",
   "Mailchimp",
   "Sendgrid",
   "A/B Testing",
@@ -68,7 +67,6 @@ const DataAnalysisSkills = [
   "Data Visualization",
   "Google Looker Studio",
   "Google Analytics",
-  "Google Tag Manager",
   "Hotjar",
   "Google Search Console",
   "Google Optimize",
@@ -78,7 +76,7 @@ const DataAnalysisSkills = [
   //   "Power BI",
   //   "Tableau",
   "Data Cleaning",
-  "Data Analysis",
+  "Data-Driven Actions",
   "Statistics",
 ];
 
