@@ -15,13 +15,13 @@ export const metadata: Metadata = {
   description: "Full-stack Developer with experience in Digital Marketing and Data Analysis",
 };
 
-export const inter = Inter({
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
 });
 
-export const league_spartan = League_Spartan({
+const league_spartan = League_Spartan({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-league-spartan",
