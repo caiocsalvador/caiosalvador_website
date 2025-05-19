@@ -59,12 +59,14 @@ const ExperienceItem = ({ title, startDate, endDate, description, color, classNa
 
   const components = {
     block: ({ children }: any) => <div className="text mt-2 leading-6 text-gray">{children}</div>,
+    list: ({ children }: any) => <ul className="mb-2 list-disc pl-5 text-gray">{children}</ul>,
+    listItem: ({ children }: any) => <li className="py-1 text-gray">{children}</li>,
   };
 
   return (
     <div className={`${className}`} ref={experiecesContainer}>
       <div
-        className={`experience rounded-r-2xl border-l-4 bg-transparent_white p-5 ${colorVariants[color]} ${className}`}
+        className={`experience rounded-r-2xl border-l-4 bg-transparent_white p-5  ${colorVariants[color]} ${className}`}
       >
         <h3 className="font-league_spartan text-2xl font-semibold">{title}</h3>
         <p className="text-xs uppercase text-purple">

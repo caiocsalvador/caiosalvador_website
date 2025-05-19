@@ -56,7 +56,7 @@ const AboutCard = ({ title, text, imageUrl }: AboutCardProps) => {
   return (
     <>
       <div id="about" className="absolute left-0 top-[-100px]"></div>
-      <h2 className="mb-10 text-center font-league_spartan text-5xl font-semibold xl:text-6xl">{title}</h2>
+      <h2 className="mb-10 text-center font-sans text-5xl font-semibold xl:text-6xl">{title}</h2>
       <div
         ref={aboutContainer}
         className="grid gap-2 bg-gradient-to-r from-about_gcolor1 to-about_gcolor2 md:grid-cols-3"
@@ -68,7 +68,7 @@ const AboutCard = ({ title, text, imageUrl }: AboutCardProps) => {
           <div className="aboutImage max-h-[250px] max-w-[250px] rounded-full bg-white p-1">
             <Image src={imageUrl} alt="Caio Salvador" className="rounded-full" width={250} height={250} />
           </div>
-          <Link target="_blank" className="mt-4 text-sm underline" href="caio_cesar_salvador_santos_cv.pdf">
+          <Link target="_blank" className="mt-4 text-sm underline" href="caio_salvador_santos_cv_2025.pdf">
             Download my CV
           </Link>
           <div className="mt-6 flex flex-row justify-center md:mt-10">

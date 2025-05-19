@@ -71,11 +71,12 @@ const DataAnalysisSkills = [
   "Google Search Console",
   "Google Optimize",
   "VWO",
+  "Funnel.io",
   "SQL",
   "Excel",
   //   "Power BI",
   //   "Tableau",
-  "Data Cleaning",
+  //   Data Cleaning",
   "Data-Driven Actions",
   "Statistics",
 ];
